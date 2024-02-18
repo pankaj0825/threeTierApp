@@ -6,7 +6,10 @@ metadata:
 spec: 
   accessModes:  
     - ReadWriteOnce
-  storageClassName: ""
+  storageClassName: standard
   resources:
     requests:
-      storage: 1Gi
+      storage: 256Mi
+  selector:
+    matchLabels:
+      name: mongo-pv
